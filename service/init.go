@@ -1,9 +1,13 @@
 package service
 
-import "fmt"
+type Client interface {
+	Add(*string) string
+	Get() []byte
+	Help() any
+}
 
-// 在service层编写你的业务逻辑函数
+type CmdClient struct{}
 
-func Example() {
-	fmt.Println("Hello!")
+func NewClient() *CmdClient {
+	return &CmdClient{}
 }

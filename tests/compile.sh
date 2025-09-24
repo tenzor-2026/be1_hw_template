@@ -17,10 +17,17 @@ else
         exit 1
     fi
     echo "Go模块初始化成功"
+    
+    echo "执行go mod tidy..."
+    go mod tidy
+    if [ $? -ne 0 ]; then
+        echo "go mod tidy执行失败!退出..."
+        exit 1
+    fi
 fi
 
-echo "go build ."
-go build .
+echo "go build -o zx ."
+go build -o zx .
 
 if [ $? -ne 0 ]; then
     echo "编译失败！退出..."
