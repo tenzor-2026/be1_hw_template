@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -f ./students.json
+rm -f *.json
 
 echo "=== 测试add功能 ==="
 

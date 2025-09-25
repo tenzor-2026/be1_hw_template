@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 清理环境，删除之前的数据文件
-rm -f ./students.json
+rm -f *.json
 
 echo "=== 测试get功能 ==="
 
