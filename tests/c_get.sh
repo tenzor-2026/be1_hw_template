@@ -189,7 +189,7 @@ echo "✅ 测试5通过"
 echo ""
 
 echo "测试6: 清空数据后重新测试"
-rm -f ./students.json
+rm -f *.json
 
 empty_result=$(./zx -get)
 if [ "$empty_result" != "nothing" ]; then
